@@ -1,9 +1,17 @@
 
 body{
     margin: 0;
+    background-color :#111F2C;
 }
 /* NAGIVATION */
 
+.profile_picture{
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+    margin: 1em;
+
+ }
 
 header{
     width: 100%;
@@ -13,22 +21,51 @@ header{
 } 
 
 .container{
-    max-height: 10vh;
+    height: 10vh;
 }
 .container-flex{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     background-color: #9D7E6A;
     
 }
 
+.main_section{
+    background-image: url('images/IMG-2134[437].jpg');
+    background-size: cover;
+    height: 90vh;
+    background-position: center ;
+    margin: 0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    
+    
+}
+
+.page_title{
+
+    max-width: 30%;
+    max-height: 30%;
+    
+    /* align-self: flex-end; */
+    /* margin: 0;
+    font-size: 4rem;
+    letter-spacing: .1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; */
+     padding: 1em .5em; 
+   
 
 
+}
 
+/* Navigation Bar  */
 .logo{
     max-width: 10%;
     object-fit: contain;
-    
     
 }
 nav{
@@ -78,18 +115,33 @@ main{
     
 }
 
+/* about me  */
+.about_me_main{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    height: 80vh;
+    align-items: center;
+    justify-items: center;
+}
+
+.about_me_title,
+.about_me_info{
+    color: white;
+}
 
 
-
-
+/* end about me */
 
 /* Carosel */
 
 
 .carousel {
     max-width: 600px;
-    
     margin: 1rem auto;
+    max-height: 90vh;
+   
 }
 
 .carousel .carousel-item {
@@ -99,14 +151,20 @@ main{
 .carousel .carousel-item-visible {
     display: block;
     animation: fadeVisibility 6s
+    
 }
 
 .carousel .carousel-item img {
-    width: 100%;
+    width: auto;
     max-width: 600px;
-    height: auto;
+    
 }
-
+/* .carousel-item img {
+    width: auto;
+    height: 80%;
+    justify-content: space-between;
+    
+} */
 .carousel .carousel-actions{
     display: flex;
     width: 100%;
@@ -148,3 +206,5 @@ main{
         opacity:1;
     }
 }
+
+/* End Carousel */
