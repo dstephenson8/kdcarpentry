@@ -3,82 +3,64 @@ body{
     margin: 0;
     background-color :#111F2C;
 }
-/* NAGIVATION */
 
 .profile_picture{
     max-height: 350px;
     width: 100%;
     object-fit: cover;
     margin: 1em;
-
  }
 
-header{
-    width: 100%;
-    height: 10%;
-    margin: 0 auto;
-    
-} 
-
-.container{
-    height: 10vh;
-}
-.container-flex{
-    display: flex;
-    justify-content: flex-end;
-    background-color: #9D7E6A;
-    
-}
 
 .main_section{
     background-image: url('images/IMG-2134[437].jpg');
     background-size: cover;
-    height: 90vh;
+    height: 80vh;
     background-position: center ;
     margin: 0;
     padding:0;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: flex-end;
     
     
 }
 
-.page_title{
+.logo,
+.logo_about_me,
+.logo_photo_gallery{
 
     max-width: 30%;
     max-height: 30%;
-    
-    /* align-self: flex-end; */
-    /* margin: 0;
-    font-size: 4rem;
-    letter-spacing: .1em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100; */
-     padding: 1em .5em; 
-   
-
-
+    padding: 1em .5em; 
 }
 
 /* Navigation Bar  */
+.container{
+    height: 20vh;
+    width: 100%;
+}
+.container-flex{
+    display: flex;
+    justify-content: center;
+    background-color: #9D7E6A;
+    
+}
 
 nav{
     width: 50%;
     align-self: center;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    
-    
+       
 }
 nav ul{
     color: white;
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    
+    justify-content: center;
+    align-self: center;
+    text-align: center;
     
 }
 
@@ -90,16 +72,26 @@ nav a {
     letter-spacing: .2rem;
     padding: .25em 0;
 }
+.selected{
+    border-bottom: 1px solid white;
+    padding-bottom: 0;
+}
 
 
-@media (max-width: 675px) {
-    nav ul {
-        flex-direction: column;
+@media (min-width: 675px) {
+
+    nav{
+        max-width: 90%;
     }
+    nav ul  {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  
+        
+    }
+ 
     
-    nav li {
-        margin: .5em 0;
-    }
+    
 }
 
 /* END NAGIVATION */
@@ -119,91 +111,58 @@ main{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    max-width: 60%;
+    max-width: 100%;
     height: 80vh;
     align-items: center;
     justify-items: center;
 }
 
+
+.profile_picture,
 .about_me_title,
 .about_me_info{
     color: white;
+    max-width: 60%;
 }
 
-
+.logo_about_me
+{
+    align-self: center;
+    
+}
 /* end about me */
 
-/* Carosel */
 
 
-.carousel {
-    max-width: 600px;
-    margin: 1rem auto;
-    max-height: 90vh;
-   
-}
 
-.carousel .carousel-item {
-    display: none;
-}
-
-.carousel .carousel-item-visible {
-    display: block;
-    animation: fadeVisibility 6s
-    
-}
-
-.carousel .carousel-item img {
-    width: auto;
-    max-width: 600px;
-    
-}
-/* .carousel-item img {
-    width: auto;
-    height: 80%;
-    justify-content: space-between;
-    
-} */
-.carousel .carousel-actions{
+.my-gallery {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);     
+    flex-direction: column;
+    align-items: center;
 }
 
-.carousel-item-hidden{
-    display: none; 
-   
+.my-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
-#carousel-button-next, #carousel-button-prev{
-    border-radius: 50px;
-    background-color: white;
-    border: 0;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-} 
-
-#carousel-button-prev {
-    margin-left: 20px;
+.my-photo {
+    border: 0.1rem solid white;
+    border-radius: 0.7rem;
+    margin: 0.5rem;
+    height: 200px;
+    width: 200px;
 }
 
-#carousel-button-next {
-    margin-right: 20px;
+.footer_recent{
+    display:flex;
+    justify-content: center;
 }
 
-@keyframes fadeVisibility{
-    0% {
-        opacity: 0;
-    }
-    100%{
-        opacity:1;
+@media(min-width: 675px){
+    .logo_photo_gallery{
+        max-height: 200px;
     }
 }
-
-/* End Carousel */
